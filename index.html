@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es-ve">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UrlSave</title>
+  <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="icofont.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="fuentes.css" type="text/css" media="all" />
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#111827" />
+  <script defer src="main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+  <header class="app-header">
+          <img class="logo" src="logo.png" alt="" />
+    <h1>Marcadores</h1>
+    <p>Ingresa una URL para guardarla y acceder rápido.</p>
+  </header>
+
+  <main class="container">
+    <form id="bookmark-form" autocomplete="on">
+      
+      <label for="url-input">URL</label>
+      <div class="input-row">
+        <input id="url-input" type="url" inputmode="url" placeholder="https://ejemplo.com" required />
+        <button type="submit" class="btn primary">Guardar</button>
+      </div>
+      <small class="hint">Ejemplo: https://webzona.com</small>
+    </form>
+
+    <section class="list-section">
+
+      <h2>Mis sitios</h2>
+      <ul id="bookmark-list" class="bookmark-list" aria-live="polite"></ul>
+    </section>
+  </main>
+
+  <template class="template" id="bookmark-item-template">
+    <li class="bookmark-item">
+  
+     
+      <a class="bookmark-link" target="_blank" rel="noopener">
+            <div class="grupo__item">
+        
+        <img class="favicon" alt="" />
+        <div class="info">
+          <span class="name"></span>
+          <span class="url"></span>
+        </div>
+               </div>
+      </a>
+
+      <div class="actions">
+        <button class="btn small" data-action="edit" title="Editar"><span class="icofont-duotone icofont-pencil"></span></button>
+        <button class="btn small danger" data-action="delete" title="Eliminar"><span class="icofont-duotone icofont-purge"></span></button>
+      </div>
+    </li>
+  </template>
+
+  <dialog id="edit-dialog">
+    <form method="dialog" id="edit-form">
+      <h3>Editar marcador</h3>
+      <label for="edit-name">Nombre</label>
+      <input id="edit-name" type="text" required />
+      <label for="edit-url">URL</label>
+      <input id="edit-url" type="url" required />
+      <div class="dialog-actions">
+        <button class="btn" value="cancel">Cancelar</button>
+        <button class="btn primary" value="confirm">Guardar cambios</button>
+      </div>
+    </form>
+  </dialog>
+
+  <footer class="app-footer">
+    <small>Funciona offline. Instálala como PWA desde el navegador. | Desarrollado por WEBZONA, Yampiero Mujica 2026 ©</small>
+  </footer>
+
+  
+</body>
+</html>
