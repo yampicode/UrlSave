@@ -1,8 +1,8 @@
 {
   "name": "UrlSave | Guardar tus URL favoritas",
   "short_name": "UrlSave",
-  "start_url": "./",
-  "scope": "./",
+  "start_url": "/",
+  "scope": "/",
   "display": "standalone",
   "background_color": "#0b0f1a",
   "theme_color": "#4682B4",
