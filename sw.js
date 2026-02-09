@@ -2,12 +2,12 @@
 const CACHE_NAME = "marcadores-cache-v1";
 const PRECACHE = [
   "/",
-  "/index.html",
-  "/style.css",
-  "/main.js",
-  "/manifest.json",
-  "/sw.js"
-  "/icofont.min.css",
+  "index.html",
+  "style.css",
+  "main.js",
+  "manifest.json",
+  "sw.js"
+  "icofont.min.css",
   "/icon-192.png",
   "/icon-512.png",
   "/logo.png",
